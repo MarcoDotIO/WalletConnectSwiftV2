@@ -72,6 +72,7 @@ final class NotifyTests: XCTestCase {
         walletPairingClient = pairingClient
         let pushClient = PushClientFactory.create(projectId: "",
                                                   pushHost: "echo.walletconnect.com",
+                                                  keyValueStorage: keyValueStorage,
                                                   keychainStorage: keychain,
                                                   environment: .sandbox)
         let keyserverURL = URL(string: "https://keys.walletconnect.com")!
